@@ -1,0 +1,212 @@
+/* Universal Effects */
+    body
+    {
+        font-family: 'Oswald', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a
+    {
+        text-decoration: none;
+    }
+
+    a:hover
+    {
+        text-decoration: underline;
+    }
+
+    li
+    {
+        list-style: none;
+    }
+
+    p,blockquote{
+        /* Effects on Y-axis */
+        line-height: 2;
+
+        font-size: .9em;
+    }
+/* End of Universal Effects  */
+
+nav ul{
+    background-color: lightseagreen;
+    margin-top: -1rem;
+}
+
+nav ul li a{
+    /*  Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width.*/
+    display: block;
+
+    text-align: center;
+    font-size: 1.3rem;
+    color:turquoise;
+
+    /* padding:top & bottom left & right */
+    padding: 15px 25px;
+
+    text-transform: capitalize;
+}
+
+.logo-img{
+    /* converts columns into row */
+    display: flex;
+
+    /* On X-axis */
+    align-items: flex-start;
+    
+    margin-left: -3rem;
+}
+
+section{
+    text-align: center;
+}
+
+.server-image{
+    width: 60%;
+
+    /* margin:top right bottom left */
+    margin: 2em auto 2em 25%;
+}
+
+h1,.paragraph{
+    /* position: relative, it’ll remain “in the flow” of the layout but you can move it around! */
+    position: relative;
+
+    /* stacks one on each other based on value  */
+    z-index: 3;
+}
+
+h1,.paragraph{
+    text-transform: capitalize;
+    color: teal;
+}
+
+.blue-container{
+    text-align: center;
+    width: 100%;
+    color: whitesmoke;
+    background-color: #00C2FF;
+    margin-top: 15%;
+
+    /* padding:top left & right bottom */
+    padding:2em 0 2em;
+
+    border-top-left-radius: 40px;
+    transform: skewY(-2deg)
+}
+
+.blue-container::before{
+    content: '';
+    width: 40px;
+    height: 40px;
+
+    /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+    position: absolute;
+
+    background-color: #00C2FF;
+    top: -39px;
+    right: 0;
+
+    /* stacks one on each other based on value  */
+    z-index: -2;
+}
+
+.blue-container::after{
+    content: '';
+    width: 80px;
+    height: 80px;
+    background-color:white;
+
+    /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+    position: absolute;
+
+    top: -80px;
+    right: 0;
+    border-radius: 50%;
+
+    /* stacks one on each other based on value  */
+    z-index: -1;
+}
+
+.blue-container ul{
+    transform: skewY(2deg);
+}
+
+.blue-container ul li{
+    margin-bottom: 3em;
+}
+
+.blue-container ul li p{
+    padding: 0 .5em;
+}
+
+.blue-container img{
+    width: 15%;
+}
+
+.blue-container ul li:nth-child(3) img{
+    width: 10%;
+}
+
+.public-container{
+    background-color: #F6F6F6;
+
+    /* padding:top left & right bottom */
+    padding: 4em 0 2em;
+
+    text-align: center;
+    margin-top: -3%;
+}
+
+.public-container ul li:first-child{
+    margin-bottom: 3em;
+}
+
+.public-container ul li figure img{
+    width: 30%;
+    margin: 0;
+    padding: 0;
+}
+
+figcaption{
+    color: #00C2FF;
+    font-weight: bold;
+}
+
+.white-container{
+    text-align: center;
+}
+
+.button{
+    margin-bottom: 3em;
+    background-color: #00CC80;
+    width: 60%;
+
+    /* Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width. */
+    display: block;
+
+    color: white;
+    border-radius: 20px;
+    padding: .5em;
+    border: none;
+    font-size: 1em;
+
+    /* margin:top left & right bottom */
+    margin: 3% auto 7%; 
+}
+
+footer{
+    text-align: center;
+    width: 100%;
+    background-color: #3D444A;
+    color: white;
+
+    /*padding:top & bottom left & right */
+    padding: 3em 0;
+}
+
+footer p{
+    font-size: 1rem;
+}
